@@ -1,4 +1,5 @@
 import UI.NCurses
+import Core (readProcStat)
 
 main :: IO ()
 main = runCurses $ do
@@ -7,7 +8,7 @@ main = runCurses $ do
     updateWindow w $ do
         moveCursor 1 10
         drawString "Hello world!"
-        moveCursor 3 10
+        moveCursor 3 30
         drawString "(press q to quit)"
         moveCursor 0 0
     render
